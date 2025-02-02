@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Satélite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff5722;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .container {
+            margin: 20px;
+        }
+        .plan {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <header>Venta de IPTV Satélite</header>
+
+    <div class="container">
+        <h2>Disfruta de la mejor TV por IPTV</h2>
+        <p>Canales nacionales e internacionales en alta calidad.</p>
+
+        <div class="plan">
+            <h3>Plan Rusia, Ukrania,Reino Unido, España, Suecia, Noreuega, Dinamarca</h3>
+            <p>Más de 10000 canales</p>
+            <p>Precio: $100/año</p>
+            <button onclick="comprar('Plan Básico', 10)">Comprar por WhatsApp</button>
+        </div>
+
+        <div class="plan">
+            <h3>Plan Premium</h3>
+            <p>Más de 33000 todos los canales del mundo</p>
+            <p>Precio: $125/año</p>
+            <button onclick="comprar('Plan Premium', 20)">Comprar por WhatsApp</button>
+        </div>
+    </div>
+
+    <script>
+        function comprar(plan, precio) {
+            let telefono = "0034661335438"; // Reemplaza con tu número de WhatsApp
+            let mensaje = `Hola, quiero comprar el ${plan} por $${precio}.`;
+            let url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
